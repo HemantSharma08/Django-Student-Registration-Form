@@ -18,7 +18,8 @@ def show_data(request):
             st=fm.cleaned_data['state']
             con=fm.cleaned_data['country']
             reg=Student(firstname=fn,lastname=ln,date=dt,email=em,mobile=mb,gender=gn,address=add,city=ct,pincode=pin,state=st,country=con)
-            reg.save()         
+            reg.save()
+            fm = StudentRegistration()
     else:
         fm = StudentRegistration()
         
